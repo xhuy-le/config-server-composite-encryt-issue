@@ -6,11 +6,12 @@ spring:
     name: "config-server"
   profiles:
     active:
-      - native
+      - composite
   cloud:
     config:
       server:
         bootstrap: true
-        native:
-          search-locations: "{cipher}8ab6fae9cc39ca61035a3d897d51ab18f1009d7fa04f157d7478285ea28c87e7"
-          #search-locations: "file:config"
+        composite:
+          - type: native
+            search-locations: "{cipher}8ab6fae9cc39ca61035a3d897d51ab18f1009d7fa04f157d7478285ea28c87e7"
+            #search-locations: "file:config"
