@@ -15,3 +15,4 @@ spring:
           - type: native
             search-locations: "{cipher}8ab6fae9cc39ca61035a3d897d51ab18f1009d7fa04f157d7478285ea28c87e7"
             #search-locations: "file:config"
+mysecret: "{cipher}f73aec41e9cfb48861d0ba8c47b4df31953eab79c75c7320558f58ec51df3ead"

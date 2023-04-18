@@ -9,6 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class ConfigServerApplicationTest {
 
+    @Value("${mysecret}")
+    String secret;
+
     @Value("${server.port}")
     int port;
 
@@ -18,6 +21,7 @@ class ConfigServerApplicationTest {
 
     @Test
     void contextLoads() {
+        assertEquals("test", secret);
         assertEquals(8888, port);
     }
 }
